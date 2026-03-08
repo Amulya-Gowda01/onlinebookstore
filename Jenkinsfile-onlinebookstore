@@ -1,0 +1,37 @@
+pipeline {
+    agent any
+
+    stages {
+
+        stage('Checkout Code') {
+            steps {
+                git 'https://github.com/Amulya_Gowda01/OnlineBookstore.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo "Building Application"
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo "Running Tests"
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                sh 'docker build -t onlinebookstore .'
+            }
+        }
+
+        stage('Run Container') {
+            steps {
+                sh 'docker run -d -p 80:80 onlinebookstore'
+            }
+        }
+
+    }
+}
