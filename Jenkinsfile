@@ -10,7 +10,7 @@ pipeline {
 
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/Amulya_Gowda01/Onlinebookstore-public.git'
+                git 'https://github.com/Amulya-Gowda01/Onlinebookstore-public.git'
             }
         }
 
