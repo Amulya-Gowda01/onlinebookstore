@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = "amulya78/onlinebookstore"
         CONTAINER_NAME = "onlinebookstore-container"
-        APP_SERVER = "ec2-user@13.233.163.69"
+        APP_SERVER = "ec2-user@3.109.121.118"
     }
 
     stages {
